@@ -5,15 +5,12 @@ import os
 bot = Bot(command_prefix='.', intents=discord.Intents.all())
 
 token = ''
-channel_id = 0
+channel_id = 1019963447280144475
 
 try:
-    token = os.environ["token"]
-    channel_id = os.environ["channel_id"]
-except KeyError:
-    print('token not available')
-    token = 'ODI0NjIzMDI1MTU1NzM1NTYy.GZVlW_._ZY2ahiEHdf0U_VscMgor8QXEquzpVhB4H1mxg'
-    channel_id = 1019963447280144475
+    token = os.environ["TOKEN"]
+except:
+    print('env theke token pai nai')
 
     
 
