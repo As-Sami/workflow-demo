@@ -4,11 +4,16 @@ import os
 
 bot = Bot(command_prefix='.', intents=discord.Intents.all())
 
+token = ''
+channel_id = 0
+
 try:
     token = os.environ["token"]
     channel_id = os.environ["channel_id"]
 except KeyError:
-    SOME_SECRET = "Token and id not available!"
+    print('token not available')
+    token = 'ODI0NjIzMDI1MTU1NzM1NTYy.GZVlW_._ZY2ahiEHdf0U_VscMgor8QXEquzpVhB4H1mxg'
+    channel_id = 1019963447280144475
 
     
 
