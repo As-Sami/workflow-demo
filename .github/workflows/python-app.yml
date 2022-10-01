@@ -31,5 +31,5 @@ jobs:
 
       - name: runing app
         env:
-          token: ${{ secrets.TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}
         run: python3 main.py
