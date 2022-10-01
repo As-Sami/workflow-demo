@@ -18,7 +18,7 @@ except:
 async def on_ready():
     await bot.wait_until_ready()
     
-    print.info(f'{bot.user} is online')
+    print(f'{bot.user} is online')
     await bot.get_channel(channel_id).send('hello discord from github')
     
     exit()
