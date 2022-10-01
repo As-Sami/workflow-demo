@@ -1,18 +1,6 @@
 import discord
 from discord.ext.commands import Bot
-import os, logging
-
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-logger_file_handler = logging.handlers.RotatingFileHandler(
-    "status.log",
-    maxBytes=1024 * 1024,
-    backupCount=1,
-    encoding="utf8",
-)
-formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-logger_file_handler.setFormatter(formatter)
-logger.addHandler(logger_file_handler)
+import os
 
 bot = Bot(command_prefix='.', intents=discord.Intents.all())
 
@@ -28,11 +16,11 @@ except KeyError:
 async def on_ready():
     await bot.wait_until_ready()
     
-    logger.info(f'{bot.user} is online')
+    print.info(f'{bot.user} is online')
     await bot.get_channel(channel_id).send('hello discord from github')
     
     exit()
 
 if __name__ == '__main__':
-    logger.info(f"Token value: {token}")
+    print('token =', token)
     bot.run(token)
